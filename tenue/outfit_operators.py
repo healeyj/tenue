@@ -15,7 +15,7 @@ def create_outfit():
 def delete_outfit(arg):
     if validate_outfit_id(arg):
         Outfit.delete().where(Outfit.id == arg).execute()  # delete piece
-        OutfitPiece.delete().where(OutfitPiece.outfit_id == arg).execute()  # delete its associated colors
+        OutfitPiece.delete().where(OutfitPiece.outfit_id == arg).execute()  # delete its associated pieces
         print("Outfit #" + arg + " deleted.")
     return
 

@@ -25,6 +25,7 @@ def delete_piece(arg):
         Piece.delete().where(Piece.id == arg).execute()  # delete piece
         PieceColor.delete().where(PieceColor.piece_id == arg).execute()  # delete its associated colors
         PieceAccent.delete().where(PieceAccent.piece_id == arg).execute()  # delete its associated accents
+        OutfitPiece.delete().where(OutfitPiece.piece_id == arg).execute()  # delete its associated pieces
         print((shortname + " deleted.").center(console_width))
     return
 
