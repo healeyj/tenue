@@ -62,7 +62,7 @@ def edit_piece_switcher(target_prop, target_piece, args):
         if len(args) > 0:
             target_piece.nickname = " ".join(args)
         else:
-            target_piece.brand = ""
+            target_piece.nickname = ""
     elif target_prop == 'brand' or target_prop == 'brands':
         if len(args) > 0:
             target_piece.brand = " ".join(args)
