@@ -37,7 +37,7 @@ Tenue is a command-line application. It runs on Python and SQL.
 ## Design specifications:
 **Pieces** of clothing have 6 optional attributes: *kind, subkind, nickname, brand, colors, and accents*.
 
-- *Kinds* are predefined in *init_db.py*: 'headwear', 'outerwear', 'top', 'underwear', 'bottom', 'footwear', and 'accessory'
+- *Kinds* are predefined: 'headwear', 'outerwear', 'top', 'underwear', 'bottom', 'footwear', and 'accessory'
 
 - *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top')
 
@@ -45,11 +45,11 @@ Tenue is a command-line application. It runs on Python and SQL.
 
 - *Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.)
 
-- *Colors* are the major, dominant colors of a piece, and they must match a [CSS color](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png) 
+- *Colors* are the major, dominant colors of a piece, and they must match a [predefined CSS color](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png) 
 
 - *Accents* are the same as *colors* except they represent minor, subtle colors of a piece 
 
-##Dependencies:
+## Dependencies:
 * [peewee](https://github.com/coleifer/peewee)
 * [num2words](https://pypi.org/project/num2words/)
 
