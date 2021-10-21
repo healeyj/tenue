@@ -81,22 +81,7 @@ class Shell(cmd.Cmd):
             if validate_outfit_id(arg):
                 print_outfit(arg)
 
-    def do_x(self, arg):
-        """E(x)it. Exit the shell."""
-        print("Thank you for using tenue.")
-        sys.exit()
-
-    def do_exit(self, arg):
-        """Exit. Exit the shell."""
-        print("Thank you for using tenue.")
-        sys.exit()
-
     def do_q(self, arg):
         """(Q)uit. Exit the shell."""
-        print("Thank you for using tenue.")
-        sys.exit()
-
-    def do_quit(self, arg):
-        """Quit. Exit the shell."""
         print("Thank you for using tenue.")
         sys.exit()
