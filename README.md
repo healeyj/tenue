@@ -6,22 +6,22 @@ Tenue is a command-line application. It runs on Python and SQL.
 
 An **outfit** *(une tenue)* is an arrangement of pieces.
 
-==jgs==!====!=====!=====!====!===!===!=====!===!===!====
-      /`\__/`\   /`\   /`\  |~| |~|  /)=I=(\  /`"""`\
-     |        | |   `"`   | | | | |  |  :  | |   :   |
-     '-|    |-' '-|     |-' )/\ )/\  |  T  \ '-| : |-'
-       |    |     |     |  / \// \/  (  |\  |  '---'
-       '.__.'     '.___.'  \_/ \_/   |  |/  /
-                                     |  /  /
-                                     |  \ /
-                                     '--'`
+    ==jgs==!====!=====!=====!====!===!===!=====!===!===!====
+       /`\__/`\   /`\   /`\  |~| |~|  /)=I=(\  /`"""`\
+      |        | |   `"`   | | | | |  |  :  | |   :   |
+      '-|    |-' '-|     |-' )/\ )/\  |  T  \ '-| : |-'
+        |    |     |     |  / \// \/  (  |\  |  '---'
+        '.__.'     '.___.'  \_/ \_/   |  |/  /
+                                      |  /  /
+                                      |  \ /
+                                      '--'`
 
-## features:
+## Features:
 * catalog your clothes
 * modify outfits in seconds
 * search clothes and outfits with keywords
----
-## supported commands:
+
+## Supported commands:
 - np - Create new piece
 - cp - Clone/Duplicate piece
 - ep - Edit piece
@@ -35,27 +35,26 @@ An **outfit** *(une tenue)* is an arrangement of pieces.
 - vo - View specific outfit
 - sp - Search pieces
 - so - Search outfits
----
-## design specifications:
+
+## Design specifications:
 **Pieces** of clothing have 6 optional attributes: *kind, subkind, nickname, brand, colors,* and *accents*.
 
-*Kinds* are predefined in *init_db.py*: headwear, outerwear, top, underwear, bottom, footwear, and accessory.
+- *Kinds* are predefined in *init_db.py*: headwear, outerwear, top, underwear, bottom, footwear, and accessory.
 
-*Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top', "jeans" are a subkind of 'bottom', "sneakers" are a subkind of 'footwear', ect.).
+- *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top', "jeans" are a subkind of 'bottom', "sneakers" are a subkind of 'footwear', ect.).
 
-*Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt").
+- *Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt").
 
-*Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.).
+- *Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.).
 
-*Colors* must match a [CSS4 color from matplotlib](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png). This is a multivalued attribute that represents the major colors of the piece.
+- *Colors* must match a [CSS4 color from matplotlib](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png). This is a multivalued attribute that represents the major colors of the piece.
 
-*Accents* functions the same as colors except it represents colors of a piece that are subtle but still visible. 
+- *Accents* functions the same as colors except it represents colors of a piece that are subtle but still visible. 
 
----
-## dependencies:
+## Dependencies:
 * [peewee](https://github.com/coleifer/peewee)
 * [num2words](https://pypi.org/project/num2words/)
 
-## instructions:
+## How do i use tenue?
 
 Clone the repo, install Python and the dependencies above, then execute main.py
