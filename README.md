@@ -1,43 +1,57 @@
-# tenue
+# Tenue wardrobe manager
+
+Tenue is a command-line application. It runs on Python and SQL.
 
 *Tenue* is the French word for outfit.
 
-## a text-based wardrobe manager
+An **outfit** *(une tenue)* is an arrangement of pieces.
 
-tenue is a command-line wardrobe manager.
+==jgs==!====!=====!=====!====!===!===!=====!===!===!====
+      /`\__/`\   /`\   /`\  |~| |~|  /)=I=(\  /`"""`\
+     |        | |   `"`   | | | | |  |  :  | |   :   |
+     '-|    |-' '-|     |-' )/\ )/\  |  T  \ '-| : |-'
+       |    |     |     |  / \// \/  (  |\  |  '---'
+       '.__.'     '.___.'  \_/ \_/   |  |/  /
+                                     |  /  /
+                                     |  \ /
+                                     '--'`
 
 ## features:
 * catalog your clothes
 * modify outfits in seconds
 * search clothes and outfits with keywords
 ---
+## supported commands:
+- np - Create new piece
+- cp - Clone/Duplicate piece
+- ep - Edit piece
+- dp - Delete piece
+- no - Create outfit
+- ap - Add piece to outfit
+- rp - Remove piece from outfit
+- co - Clone/Duplicate outfit
+- do - Delete outfit
+- vp - View specific piece
+- vo - View specific outfit
+- sp - Search pieces
+- so - Search outfits
+---
 ## design specifications:
 **Pieces** of clothing have 6 optional attributes: *kind, subkind, nickname, brand, colors,* and *accents*.
 
-*Kind* is predefined in *init_db.py*:
-> ['',
-         'headwear',
-         'outerwear',
-         'top',
-         'underwear',
-         'bottom',
-         'footwear',
-         'accessory'  # ex. belts, socks, masks, jewelry, ect.
-         ]
+*Kinds* are predefined in *init_db.py*: headwear, outerwear, top, underwear, bottom, footwear, and accessory.
 
-*Subkind* is a user-defined attribute to further specify a kind (ex. "rain jacket", "jeans", "sneakers", ect.).
+*Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top', "jeans" are a subkind of 'bottom', "sneakers" are a subkind of 'footwear', ect.).
 
-*Nickname* should help identify the piece (ex. "my favorite shirt").
+*Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt").
 
-*Brand* is straightforward (ex. "Nike", "Levi's", "Gucci", ect.).
+*Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.).
 
 *Colors* must match a [CSS4 color from matplotlib](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png). This is a multivalued attribute that represents the major colors of the piece.
 
-*Accents* are the same as colors except it represents minor colors on a piece (ex. a navy Ralph Lauren polo shirt with an embroidered red logo has a red accent).
+*Accents* functions the same as colors except it represents colors of a piece that are subtle but still visible. 
 
 ---
-
-An **outfit** *(une tenue)* is an arrangement of pieces.
 ## dependencies:
 * [peewee](https://github.com/coleifer/peewee)
 * [num2words](https://pypi.org/project/num2words/)
