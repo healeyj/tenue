@@ -53,6 +53,6 @@ Tenue is a command-line application. It runs on Python and SQL.
 * [peewee](https://github.com/coleifer/peewee)
 * [num2words](https://pypi.org/project/num2words/)
 
-## How do I use tenue?
+## How do I use Tenue?
 
 Clone this repository, install Python 3 and the dependencies above, then execute main.py
