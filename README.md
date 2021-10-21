@@ -37,19 +37,19 @@ Tenue is a command-line application. It runs on Python and SQL.
 ## Design specifications:
 **Pieces** of clothing have 6 optional attributes: *kind, subkind, nickname, brand, colors, and accents*.
 
-- *Kinds* are predefined in *init_db.py*: 'headwear', 'outerwear', 'top', 'underwear', 'bottom', 'footwear', and 'accessory'.
+- *Kinds* are predefined in *init_db.py*: 'headwear', 'outerwear', 'top', 'underwear', 'bottom', 'footwear', and 'accessory'
 
-- *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top', "jeans" are a subkind of 'bottom', "sneakers" are a subkind of 'footwear', ect.).
+- *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top')
 
-- *Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt").
+- *Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt")
 
-- *Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.).
+- *Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.)
 
-- *Colors* must match a [valid CSS color](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png). This is a multivalued attribute that represents the major colors of the piece.
+- *Colors* are the major, dominant colors of a piece, and they must match a [CSS color](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png) 
 
-- *Accents* functions the same as colors except it represents colors of a piece that are subtle but still visible. 
+- *Accents* are the same as *colors* except they represent minor, subtle colors of a piece 
 
-## Dependencies:
+##Dependencies:
 * [peewee](https://github.com/coleifer/peewee)
 * [num2words](https://pypi.org/project/num2words/)
 
