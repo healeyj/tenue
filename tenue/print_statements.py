@@ -191,14 +191,14 @@ def print_divider_periods():
     return
 
 
-# given piece_id, return a string that is its colors, nickname, brand, and subkind
+# given piece_id, return a string that is its colors, brand, nickname, and subkind
 def piece_shortname(piece_id):
     target_piece = Piece.get(Piece.id == piece_id)
     shortname = str(concat_multivalued_attributes_to_string("colors", piece_id))
-    if target_piece.nickname != "":
-        shortname += (" " + str(target_piece.nickname))
     if target_piece.brand != "":
         shortname += " " + str(target_piece.brand)
+    if target_piece.nickname != "":
+        shortname += (" " + str(target_piece.nickname))
     if target_piece.subkind != "":
         shortname += (" " + str(target_piece.subkind))
     return shortname
