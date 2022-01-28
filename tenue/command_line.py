@@ -22,8 +22,8 @@ class Shell(cmd.Cmd):
 
     def do_np(self, arg):
         """New piece. Creates a piece for the Wardrobe and prompts user to input its attributes."""
-        # TODO: reorder to kind, subkind, colors, brand, nickname, accents
-        create_piece(input_kind(), input_subkind(), input_nickname(), input_brand(), input_colors(), input_accents())
+        # TODO: reorder to kind, subkind, colors, brand, description, accents
+        create_piece(input_kind(), input_subkind(), input_description(), input_brand(), input_colors(), input_accents())
 
     def do_no(self, arg):
         """New outfit. Creates an blank outfit for the Lookbook."""

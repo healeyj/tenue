@@ -8,7 +8,7 @@ piece_attribute_print_order = [['id', 4],
                                ['brand', 15],
                                ['subkind', 18],
                                ['accent', 18],
-                               ['nickname', 18]
+                               ['description', 18]
                                ]
 piece_property_widths = [elems[1] for elems in piece_attribute_print_order]
 console_width = sum(piece_property_widths) + len(piece_property_widths)
@@ -190,15 +190,14 @@ def print_divider_periods():
     print("")
     return
 
-
-# given piece_id, return a string that is its colors, brand, nickname, and subkind
+# given piece_id, return a string that is its colors, brand, description, and subkind
 def piece_shortname(piece_id):
     target_piece = Piece.get(Piece.id == piece_id)
     shortname = str(concat_multivalued_attributes_to_string("colors", piece_id))
     if target_piece.brand != "":
         shortname += " " + str(target_piece.brand)
-    if target_piece.nickname != "":
-        shortname += (" " + str(target_piece.nickname))
+    if target_piece.description != "":
+        shortname += (" " + str(target_piece.description))
     if target_piece.subkind != "":
         shortname += (" " + str(target_piece.subkind))
     return shortname

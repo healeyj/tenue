@@ -23,7 +23,7 @@ class Color(Model):
 class Piece(Model):
     kind = ForeignKeyField(Kind)  # Kind
     subkind = TextField()  # Subkind
-    nickname = TextField()  # Nickname
+    description = TextField()  # Description
     brand = TextField()  # Brand
 
     class Meta:
