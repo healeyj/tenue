@@ -22,9 +22,9 @@ def input_subkind():
     return parse_blank_input(input("Piece subkind?\n"))
 
 
-# prompt user to input nickname, return string
-def input_nickname():
-    return parse_blank_input(input("Piece nickname?\n"))
+# prompt user to input description, return string
+def input_description():
+    return parse_blank_input(input("Piece description?\n"))
 
 
 # prompt user to input brand, return string

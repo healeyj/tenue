@@ -12,7 +12,7 @@ def search_pieces(keywords):
         results &= ((Piece.select().join(Kind).where(Kind.name == keyword))
                     or ((Piece.select().join(PieceColor).join(Color).where((Color.name.contains(keyword))))
                     | (Piece.select().join(PieceAccent).join(Color).where((Color.name.contains(keyword)))))
-                    or (Piece.select().where((Piece.subkind.contains(keyword)) | (Piece.nickname.contains(keyword)) |
+                    or (Piece.select().where((Piece.subkind.contains(keyword)) | (Piece.description.contains(keyword)) |
                                              (Piece.brand.contains(keyword)))))
     for p in results.order_by(Piece.kind, Piece.subkind, Piece.brand):
         print_piece(p)
@@ -32,7 +32,7 @@ def search_outfits(keywords):
                         (Color.name.contains(keyword)))) | Outfit.select().join(OutfitPiece).join(Piece).join(
                         PieceColor).join(Color).where((Color.name.contains(keyword))))
                     or (Outfit.select().join(OutfitPiece).join(Piece).where(
-                        (Piece.subkind.contains(keyword)) | (Piece.nickname.contains(keyword)) |
+                        (Piece.subkind.contains(keyword)) | (Piece.description.contains(keyword)) |
                         (Piece.brand.contains(keyword)))))
     for o in results:
         print_outfit(o)

@@ -4,10 +4,10 @@ from tenue.prompt_user_input import *
 from tenue.validators import *
 
 
-# TODO: reorder to kind, subkind, colors, brand, nickname, accents
+# TODO: reorder to kind, subkind, colors, brand, description, accents
 # given args, create piece in the database, return piece object
-def create_piece(kind_id, subkind, nickname, brand, colors, accents):
-    new_piece = Piece.create(kind_id=kind_id, subkind=subkind, nickname=nickname, brand=brand)
+def create_piece(kind_id, subkind, description, brand, colors, accents):
+    new_piece = Piece.create(kind_id=kind_id, subkind=subkind, description=description, brand=brand)
     for color in list(set(colors)):  # remove duplicate colors with set()
         PieceColor.create(piece=new_piece, color=color)
     for accent in list(set(accents)):  # remove duplicate accents with set()
@@ -36,7 +36,7 @@ def clone_piece(args):
         old_piece = Piece.get(Piece.id == args)
         old_piece_colors = Color.select().join(PieceColor).join(Piece).where(Piece.id == old_piece.id)
         old_piece_accents = Color.select().join(PieceAccent).join(Piece).where(Piece.id == old_piece.id)
-        new_piece = create_piece(old_piece.kind.id, old_piece.subkind, old_piece.nickname, old_piece.brand,
+        new_piece = create_piece(old_piece.kind.id, old_piece.subkind, old_piece.description, old_piece.brand,
                                  old_piece_colors, old_piece_accents)
         print((piece_shortname(old_piece.id) + " duplicated to Piece #" + str(new_piece.id)).center(console_width))
 
@@ -58,11 +58,11 @@ def edit_piece_switcher(target_prop, target_piece, args):
             target_piece.subkind = " ".join(args)
         else:
             target_piece.subkind = ""
-    elif target_prop == 'nickname':
+    elif target_prop == 'description':
         if len(args) > 0:
-            target_piece.nickname = " ".join(args)
+            target_piece.description = " ".join(args)
         else:
-            target_piece.nickname = ""
+            target_piece.description = ""
     elif target_prop == 'brand' or target_prop == 'brands':
         if len(args) > 0:
             target_piece.brand = " ".join(args)
