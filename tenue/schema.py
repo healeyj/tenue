@@ -48,7 +48,7 @@ class PieceAccent(Model):
 
 
 class Outfit(Model):
-    # outfits no longer have a description. it is merely than the sum of its parts
+    # outfits no longer have a description
     # desc = TextField()
 
     class Meta:
