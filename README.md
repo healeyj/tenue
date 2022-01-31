@@ -41,9 +41,9 @@ Tenue is a command-line application. It runs on Python and SQL.
 
 - *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top')
 
-- *Nicknames* are especially optional. When used, they should help identify the piece (ex. "my favorite shirt")
+- *Description* is optional. When used, it should help identify the piece (ex. "my favorite shirt")
 
-- *Brands* are straightforward (ex. "Louis Vuitton", "Yves Saint Laurent", "Dior", ect.)
+- *Brands* are the manufacturers/designers of pieces.
 
 - *Colors* are the major, dominant colors of a piece, and they must match a [predefined CSS color](https://matplotlib.org/3.1.0/_images/sphx_glr_named_colors_003.png) 
 
