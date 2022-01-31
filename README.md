@@ -41,7 +41,7 @@ Tenue is a command-line application. It runs on Python and SQL.
 
 - *Subkinds* are user-defined attributes that further specify a kind (ex. "rain jacket" is a subkind of 'top')
 
-- *Description* is optional. When used, it should help identify the piece (ex. "my favorite shirt")
+- *Descriptions* are optional. When used, they should help identify the piece (ex. "my favorite shirt")
 
 - *Brands* are the manufacturers/designers of pieces.
 
